@@ -1,25 +1,18 @@
-<<<<<<< Updated upstream
 import { Component, OnInit, ViewChild  } from '@angular/core';
 import { LoginService } from './login-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import  {CREDENTIALS}  from '../assets/login-credentails'
+import  {CREDENTIALS}  from '../../assets/login-credentails'
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 import * as CryptoJS from 'crypto-js';
-=======
-import { Component  } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
->>>>>>> Stashed changes
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-<<<<<<< Updated upstream
-export class AppComponent implements OnInit {
-  title = 'inventory';
+export class LoginComponent implements OnInit {
   model: any = {
     title: '',
     name: '',
@@ -40,7 +33,7 @@ export class AppComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
   ) { 
     if(localStorage.getItem('loggedIn')){
-      this.router.navigate(['/home'])
+      this.router.navigate(['/'])
 		}
 
   }
@@ -84,27 +77,4 @@ export class AppComponent implements OnInit {
 
     }
   }
-=======
-export class AppComponent {
-  title = 'inventory';
-  
-  /*constructor(private toastrService: ToastrService) {
-  }
-
-  public showSuccess(): void {
-    this.toastrService.success('Message Success!', 'Title Success!');
-  }
-
-  public showInfo(): void {
-    this.toastrService.info('Message Info!', 'Title Info!');
-  }
-
-  public showWarning(): void {
-    this.toastrService.warning('Message Warning!', 'Title Warning!');
-  }
-
-  public showError(): void {
-    this.toastrService.error('Message Error!', 'Title Error!');
-  }*/
->>>>>>> Stashed changes
 }
