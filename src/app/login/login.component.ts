@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
   ) { 
     if(localStorage.getItem('loggedIn')){
-      this.router.navigate(['/'])
+      this.router.navigate(['/home'])
 		}
 
   }

@@ -119,6 +119,10 @@ form .signup-link a {
 form .signup-link a:hover {
   text-decoration: underline;
 }
+/* nav-icon */
+a.nav-icon {
+  margin-right: 10px;
+}
 /* section title */
 .section-title--special{
     background: var(--transparentBlue);
