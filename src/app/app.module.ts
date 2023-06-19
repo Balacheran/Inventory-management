@@ -13,13 +13,15 @@ import { LoginService } from './login/login-service.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { InventoryViewComponent } from './home/inventory-view/inventory-view.component';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     RouterModule,
     FormsModule,
+    HomeModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
       closeButton: true,
