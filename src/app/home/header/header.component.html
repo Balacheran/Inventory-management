@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin: 20px; /*background-color: #e3f2fd;*/">
+    <img src="../../assets/img1/toyota.png" width="30" height="30" class="d-inline-block align-top" alt="Logo" style="margin-right: 5px;">
+
+    <a class="navbar-brand" routerLink="/home" style="padding-top: 2px;">{{Company_name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="onClickIV()">Inventory View <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isadminuser" (click)="manageCust()" >Manage Customers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="isadminuser" href="#" style="pointer-events: none;">Order Approval</a>
+          </li>
+        <!--li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li-->
+
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" >
+          <a class="nav-link" *ngIf="isadminuser" routerLink="/home/user">Manage User</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" style="pointer-events: none;">Welcome, {{username}}</a>
+        </li>
+        <li class="nav-item" >
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!--p>home works!</p>
+
+<div class ="headerclass" >
+<p style="margin-top: 5px;">Welcome</p>
+<button class="btn btn-primary mr-1" style="margin-left: 75%;height: 40px; margin-top: 5px;"  (click) = "onClickencry()">encry</button>
+<button class="btn btn-primary mr-1" style="height: 40px; margin-top: 5px;"  (click) = "onClickCard()">Card</button>
+<button class="btn btn-primary mr-1" style="height: 40px; margin-top: 5px;"  (click) = "logout()">Logout</button>
+
+</div-->
+<!--h1>Inventory Management Admin Dashboard</h1>
+<div >
+<button class="btn btn-success" (click) = "logout()">Logout</button>
+</div>
+<h2>Order Approval</h2>
+<div *ngFor="let order of orders">
+<p>{{ order.user }} has placed an order for {{ order.car }}.</p>
+<button class="btn btn-success" (click)="approveOrder(order)">Approve</button>
+</div>
+
+<h2>Add/Edit/Delete Car</h2>
+<form>
+<div class="form-group">
+<label>Car Model:</label>
+<input type="text" class="form-control" [(ngModel)]="newCar.model">
+</div>
+<div class="form-group">
+<label>Car Price:</label>
+<input type="text" class="form-control" [(ngModel)]="newCar.price">
+</div>
+<button class="btn btn-primary" (click)="addCar()">Add</button>
+</form>
+
+<h2>Inventory View</h2>
+<div *ngFor="let car of inventory">
+<p>{{ car.model }} - Price: {{ car.price }}</p>
+<p>Status: {{ car.status }}</p>
+</div>
+
+<h2>Reselling Car</h2>
+<form>
+<div class="form-group">
+<label>Car Model:</label>
+<input type="text" class="form-control" [(ngModel)]="resellingCar.model">
+</div>
+<div class="form-group">
+<label>Car Price:</label>
+<input type="text" class="form-control" [(ngModel)]="resellingCar.price">
+</div>
+<button class="btn btn-primary" (click)="resellCar()">Submit</button>
+</form-->
+<!--nav class="navbar navbar-expand navbar-dark bg-dark">
+<a class="navbar-brand" routerLink="/dashboard">Inventory Management</a>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/dashboard/orders">Order Approval</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/dashboard/add-car">Add Car</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/dashboard/inventory">Inventory View</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="logout()">Logout</a>
+  </li>
+</ul>
+</nav-->
+<!--Toggle-nav-bar-->
+<!--div class="pos-f-t">
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+</div-->

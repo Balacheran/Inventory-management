@@ -1,0 +1,111 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "Administrator",
+      "password": "Test@1234",
+      "email": "admin@in.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "user",
+      "name": "user",
+      "password": "Test@1234",
+      "email": "user@in.com",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "test1",
+      "name": "user",
+      "password": "Test@1234",
+      "email": "user@in.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "test2",
+      "name": "user",
+      "password": "Test@1234",
+      "email": "user@in.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "test3",
+      "name": "user",
+      "password": "Test@1234",
+      "email": "user@in.com",
+      "gender": "male",
+      "role": "",
+      "isactive": true
+    },
+    {
+      "id": "test4",
+      "name": "user",
+      "password": "Test@1234",
+      "email": "user@in.com",
+      "gender": "male",
+      "role": "user",
+      "isactive": false
+    }
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "staff",
+      "name": "Staff"
+    },
+    {
+      "code": "quality",
+      "name": "Quality"
+    },
+    {
+      "code": "technician",
+      "name": "Technician"
+    }
+  ],
+  "car": [
+    {
+      "id": 1,
+      "bname": "Audi",
+      "mname": "A4",
+      "price": "8989787867",
+      "condition": "Brand New",
+      "status": "Sale In"
+    },
+    {
+      "bname": "Honda",
+      "mname": "City",
+      "condition": "Good",
+      "price": "120000",
+      "status": "Sale In",
+      "id": 2
+    },
+    {
+      "bname": "Ford",
+      "mname": "Eco Sport",
+      "condition": "Resell",
+      "price": "250000",
+      "status": false,
+      "id": 3
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Janesh",
+      "phone": "8989787867",
+      "email": "janesh@in.com",
+      "status": "Active"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<form [formGroup]="myform" (ngSubmit)="Saveuser()">
+  <h1 mat-dialog-title>{{inputdata.title}}</h1>
+  <div mat-dialog-content>
+     <mat-form-field>
+      <mat-label>Brand Name</mat-label>
+      <input formControlName="bname" matInput>
+     </mat-form-field>
+     <mat-form-field>
+      <mat-label>Model Name</mat-label>
+      <input formControlName="mname" matInput>
+     </mat-form-field>
+     <mat-form-field>
+      <mat-label>Condition</mat-label>
+      <input matInput formControlName="condition">
+     </mat-form-field>
+     <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price">
+     </mat-form-field>
+     <div>
+      <mat-checkbox formControlName="status">Is Active</mat-checkbox>
+     </div>
+  </div>
+  <div mat-dialog-actions>
+      <button mat-raised-button type="submit" color="primary">Save</button>
+    <a (click)="closepopup()" mat-raised-button color="warn">Close</a>
+    <!-- <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button> -->
+  </div>
+  </form>
+<!--h2>Inventory View - Form Format</h2>
+<div class="card">
+  <div class="card-body">
+    <div  class="mb-3">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Car Model:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="car.model" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Price:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="car.price" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Status:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="car.status" >
+        </div>
+      </div>
+        <div class="text-center">
+          <button class="btn btn-primary me-2">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div-->

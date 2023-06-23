@@ -1,0 +1,66 @@
+<mat-card>
+  <mat-card-header>
+<mat-form-field>
+  <input matInput (keyup)="Filterchange($event)" placeholder="Enter the text" />
+</mat-form-field>
+<button class="btn ml-auto" style="margin-top: 15px;" (click)="addcustomer()" *ngIf="isadminuser" mat-raised-button color="primary">Add New Car (+)</button>
+
+  </mat-card-header>
+  <mat-card-content>
+
+  
+
+<table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="code">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> Code</th>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="bname">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef> Brand Name</th>
+      <td mat-cell *matCellDef="let element">{{element.bname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="mname">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef>Model Name</th>
+      <td mat-cell *matCellDef="let element">{{element.mname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef> Condition</th>
+      <td mat-cell *matCellDef="let element">{{element.condition}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef> Price</th>
+      <td mat-cell *matCellDef="let element">{{element.price}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-sort-header mat-header-cell *matHeaderCellDef> Status</th>
+      <td mat-cell *matCellDef="let element">{{element.status}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action</th>
+      <td mat-cell *matCellDef="let element">
+
+          <button (click)="editcustomer(element.id)" *ngIf="isadminuser" mat-raised-button color="primary">Edit</button>
+          <button mat-raised-button (click)="deleteCar(element.id)" *ngIf="isadminuser" color="warn">Delete</button>
+          <button (click)="detailcustomer(element.id)"  mat-raised-button color="primary">Detail</button>
+      </td>
+    </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+
+</table>
+
+</mat-card-content>
+<br>
+<mat-card-footer>
+
+  <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+
+</mat-card-footer>
+</mat-card>
