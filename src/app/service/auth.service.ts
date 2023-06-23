@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Country, Car } from '../Model/Customer';
+import { Country, Car, Customer } from '../Model/Customer';
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -48,7 +48,18 @@ export class AuthService {
     console.log(data)
     return this.http.post("http://localhost:3000/car",data);
   }
+  Savecustomerdata(data:any){
+    console.log(data)
+    return this.http.post("http://localhost:3000/customer",data);
+  }
+  GetCustomerdetails():Observable<Customer[]>{
+    return this.http.get<Customer[]>("http://localhost:3000/customer");
+  }
 
+  Savecustomerdetails(data:any){
+    console.log(data)
+    return this.http.post("http://localhost:3000/customer",data);
+  }
   GetCustomerbycode(code:any){
     return this.http.get("http://localhost:3000/customer/"+code);
   }

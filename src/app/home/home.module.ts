@@ -12,6 +12,7 @@ import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { MaterialModule } from 'src/material.module';
 import { CardetailComponent } from './cardetail/cardetail.component';
 import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { AddCustComponent } from './add-cust/add-cust.component';
 
 
 
@@ -26,7 +27,8 @@ import { AddcustomerComponent } from './addcustomer/addcustomer.component';
     UserComponent,
     UpdatepopupComponent,
     CardetailComponent,
-    AddcustomerComponent
+    AddcustomerComponent,
+    AddCustComponent
   ],
   imports: [
     CommonModule,

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "load": "json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +29,6 @@
     "country-state-city": "^3.1.4",
     "crypto-js": "^4.1.1",
     "font-awesome": "^4.7.0",
-    "json-server": "^0.17.3",
     "ngx-slider-v2": "^16.0.1",
     "ngx-stripe": "^16.1.1",
     "ngx-toastr": "^17.0.2",

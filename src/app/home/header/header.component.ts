@@ -46,7 +46,7 @@ export class HeaderComponent implements DoCheck{
     this.route.navigate(['/home/inventory-view']);
   }
   manageCust() {
-    this.route.navigate(['/home/manage-cus']);
+    this.route.navigate(['/home/manage_customer']);
   }
   
   Getuser():void{
