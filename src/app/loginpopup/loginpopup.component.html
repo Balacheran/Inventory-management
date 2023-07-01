@@ -1,0 +1,25 @@
+<div class="logincontainer">
+    <label class="close-btn fas fa-times" mat-dialog-close title="close"></label>
+    <div class="text">Login Form</div>
+    <form action="#" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+      <div class="data">
+        <label>Username</label>
+        <input type="text" id="name-container" name="userName" class="form-control" matInput formControlName="id">
+      </div>
+      <div class="data">
+        <label>Password</label>
+        <input type="password" id="password-container" name="password" class="form-control" matInput type="password" formControlName="password"/>
+      </div>
+      <div class="forgot-pass">
+        <a href="#">Forgot Password?</a>
+      </div>
+      <div class="btn">
+        <div class="inner"></div>
+        <button mat-raised-button type="submit" mat-dialog-close>login</button>
+      </div>
+      <div class="signup-link">
+        Not a member? <a mat-raised-button mat-dialog-close (click)="Register()">Signup now</a>
+      </div>
+    </form>
+  </div>
+  

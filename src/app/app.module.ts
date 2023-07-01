@@ -12,11 +12,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginService } from './login-service.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+<<<<<<< Updated upstream
+=======
+import { LoginComponent } from './login/login.component';
+import { InventoryViewComponent } from './home/inventory-view/inventory-view.component';
+import { HomeModule } from './home/home.module';
+import { MaterialModule } from 'src/material.module';
+import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './_helper/auth.guard';
+import { LoginpopupComponent } from './loginpopup/loginpopup.component';
+
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< Updated upstream
     HomeComponent
+=======
+    LoginComponent,
+    RegisterComponent,
+    LoginpopupComponent,
+    
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -28,7 +46,11 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
   ],
+<<<<<<< Updated upstream
   providers: [LoginService],
+=======
+  providers: [AuthGuard],
+>>>>>>> Stashed changes
   bootstrap: [AppComponent]
 })
 export class AppModule { }
