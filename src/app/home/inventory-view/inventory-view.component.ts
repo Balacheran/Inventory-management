@@ -81,11 +81,7 @@ export class InventoryViewComponent implements DoCheck {
   }
   deleteCar = async (carId: number) => {
     try {
-<<<<<<< Updated upstream
-      const response = await axios.delete(`http://localhost:3000/car/${carId}`);
-=======
       const response = await axios.delete(`https://9a7e42f03e2b-698981503777300233.ngrok-free.app/car/${carId}`);
->>>>>>> Stashed changes
       console.log(response.data); // Optional: Log the response data
       this.loadcustomer();
     } catch (error) {
